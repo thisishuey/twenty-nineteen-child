@@ -15,9 +15,9 @@
     <style type="text/css">
       #login h1 a, .login h1 a {
         background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/carpe-telam-logo.png);
-        height: 80px;
-        width: 80px;
-        background-size: 80px 80px;
+        height: 256px;
+        width: 256px;
+        background-size: 256px 256px;
         background-repeat: no-repeat;
         padding-bottom: 30px;
       }
