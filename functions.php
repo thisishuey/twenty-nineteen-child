@@ -25,6 +25,11 @@
         $args['graphql_single_name'] = 'Project';
         $args['graphql_plural_name'] = 'Projects';
         break;
+      case 'services':
+        $args['show_in_graphql'] = true;
+        $args['graphql_single_name'] = 'Service';
+        $args['graphql_plural_name'] = 'Services';
+        break;
     }
     return $args;
   }
