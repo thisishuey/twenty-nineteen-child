@@ -60,4 +60,23 @@
   }
   add_filter( 'v_forcelogin_whitelist', 'my_forcelogin_whitelist' );
 
+  /**
+   * Add WPGraphQL args to custom post types
+   *
+   * @param array $args
+   * @param string $post_type
+   * @return array
+   */
+  function my_custom_post_type_graphql( $args, $post_type ) {
+    switch( $post_type ) {
+      case 'projects':
+        $args['show_in_graphql'] = true;
+        $args['graphql_single_name'] = 'Project';
+        $args['graphql_plural_name'] = 'Projects';
+        break;
+    }
+    return $args;
+  }
+  add_filter( 'register_post_type_args', 'my_custom_post_type_graphql', 10, 2 );
+
 ?>
